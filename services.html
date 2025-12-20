@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <!-- Site Identity -->
+    <meta name="application-name" content="SG Web Technologies">
+    <meta name="theme-color" content="#00d4aa">
+    <title>Services - SG Web Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader
+    <div id="preloader"></div> -->
+
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar bg-teal text-white py-2 fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Contact Info -->
+                <div class="col-12 col-md-6">
+                    <small class="text-white fw-medium fs-6">
+
+                        <span class="me-3">
+                            <span class="me-2 text-teal">📧</span>
+                            <a href="mailto:info@sgwebtechnologies.in" class="text-white text-decoration-none">
+                                info@sgwebtechnologies.in
+                            </a>
+                        </span>
+
+                        <span>
+                            <span class="me-2 text-teal">📞</span>
+                            <a href="tel:+919699564112" class="text-white text-decoration-none">
+                                919699564112
+                            </a>
+                        </span>
+
+                    </small>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="col-12 col-md-6 text-end">
+                    <small>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white brand-logo" href="index.html">
+                SG<span>Web</span>Technologies
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- Services Hero -->
+    <section class="hero2 d-flex align-items-center text-white position-relative">
+        <!-- Background Image -->
+        <img src="./images/services page2.png" alt="SG Web Technologies Services" class="hero-bg img-fluid">
+
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="fw-bold">Our Services</h1>
+                    <p class="lead">
+                        End-to-end web design, development, and digital solutions
+                        tailored to help your business grow online.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sticky Flashing Offer Banner -->
+    <div class="flashing-offer text-center py-2" id="offerBanner" style="display: none;">
+        <h4>
+            🎉 Special Offer for New Customers! Get
+            <span class="offer-highlight">10% OFF</span> on all services. Limited Time Only! 🚀
+        </h4>
+        <button class="close-offer" onclick="closeOffer()">×</button>
+    </div>
+
+    <!-- service cards flip section -->
+    <section class="py-5 services-flip">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our Services</h2>
+
+            <div class="row g-4">
+
+                <!-- UI / UX Design -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <h5>UI / UX Design</h5>
+                                <p>Modern, responsive designs.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Popular Service</h5>
+                                <ul>
+                                    <li>User-focused layouts</li>
+                                    <li>Mobile responsive</li>
+                                    <li>High conversion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Front-End Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-code-slash"></i>
+                                </div>
+                                <h5>Front-End Development</h5>
+                                <p>Clean & scalable code.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Expert Level</h5>
+                                <ul>
+                                    <li>HTML5 / CSS3</li>
+                                    <li>Bootstrap / React</li>
+                                    <li>Fast loading</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain & Hosting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-server"></i>
+                                </div>
+                                <h5>Domain & Hosting</h5>
+                                <p>Secure & reliable hosting.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Reliable</h5>
+                                <ul>
+                                    <li>SSL included</li>
+                                    <li>Fast servers</li>
+                                    <li>99.9% uptime</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website Redesign -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </div>
+                                <h5>Website Redesign</h5>
+                                <p>Upgrade your old website.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Quick Delivery</h5>
+                                <ul>
+                                    <li>Modern UI</li>
+                                    <li>Speed optimized</li>
+                                    <li>SEO ready</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Business -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-whatsapp"></i>
+                                </div>
+                                <h5>WhatsApp Business</h5>
+                                <p>Chat automation & widgets.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>New Feature</h5>
+                                <ul>
+                                    <li>Click-to-chat</li>
+                                    <li>Auto replies</li>
+                                    <li>Lead generation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Email -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <h5>Business Email</h5>
+                                <p>Professional email setup.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Professional</h5>
+                                <ul>
+                                    <li>@yourdomain.com</li>
+                                    <li>Gmail integration</li>
+                                    <li>Spam protection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speed Optimization -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-speedometer2"></i>
+                                </div>
+                                <h5>Speed Optimization</h5>
+                                <p>Blazing fast websites.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>SEO Boost</h5>
+                                <ul>
+                                    <li>90+ PageSpeed</li>
+                                    <li>Image compression</li>
+                                    <li>Lazy loading</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Optimization -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-graph-up"></i>
+                                </div>
+                                <h5>SEO Optimization</h5>
+                                <p>Rank higher on Google.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Growth Focused</h5>
+                                <ul>
+                                    <li>On-page SEO</li>
+                                    <li>Meta optimization</li>
+                                    <li>Keyword research</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Integration -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-share-fill"></i>
+                                </div>
+                                <h5>Social Media Integration</h5>
+                                <p>Connect your platforms.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Trending</h5>
+                                <ul>
+                                    <li>Instagram feeds</li>
+                                    <li>Facebook & LinkedIn</li>
+                                    <li>Share buttons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website Maintenance -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front text-center">
+                                <div class="service-icon">
+                                    <i class="bi bi-tools"></i>
+                                </div>
+                                <h5>Website Maintenance</h5>
+                                <p>Ongoing support & updates.</p>
+                            </div>
+                            <div class="flip-back text-center">
+                                <h5>Secure & Stable</h5>
+                                <ul>
+                                    <li>Security updates</li>
+                                    <li>Performance boost</li>
+                                    <li>Content updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FAQ SECTION -->
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-stretch g-4">
+
+                <!-- FAQ SECTION -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Frequently Asked Questions</h2>
+
+                    <div class="accordion" id="faqAccordion">
+
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    How long does it take to build a website?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A standard website usually takes <strong>7–14 days</strong>,
+                                    depending on features.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Do you provide hosting & domain?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide <strong>domain, hosting & SSL</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Is the website mobile responsive?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, all websites are <strong>100% responsive</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    Do you offer maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide monthly maintenance plans.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- VIDEO / BLOG SECTION -->
+                <div class="col-md-6 d-flex flex-column p-1">
+                    <h2 class="fw-bold mb-4 ms-2">Latest Insights</h2>
+
+                    <div class="video-card shadow rounded-4 overflow-hidden flex-grow-1">
+                        <div class="ratio ratio-16x9">
+                            <video src="./Videos/blog.mp4" autoplay muted loop playsinline class="w-100 h-100"></video>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 text-muted">
+                        <!-- Learn website design, performance & digital growth strategies. -->
+                    </p>
+
+                    <!-- <a href="blog.html" class="btn btn-cta align-self-start">
+                        Visit Blog
+                    </a> -->
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919699564112" class="whatsapp-float">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:+919699564112" class="call-float">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Logo & Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="index.html" class="footer-brand text-decoration-none d-inline-block text-center mb-3">
+                        <img src="./images/SG_WEb_LOGO.png" alt="SG Web Technologies" class="footer-logo mb-2">
+                        <div class="navbar-brand fw-bold text-white brand-logo"> SG<span>Web</span>Technologies</div>
+                    </a>
+
+                    <p class="mb-3">Global web solutions from Pune. MSME Registered & 5-Star Rated.</p>
+                    <div class="badges mb-3">
+                        <span class="badge bg-teal me-2 mb-1">MSME Registered</span>
+                        <span class="badge bg-success mb-1">5-Star Rated</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#uiux"
+                                class="text-light">UI/UX Design</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#frontend"
+                                class="text-light">Front-End Development</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#hosting"
+                                class="text-light">Domain & Hosting</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#whatsapp"
+                                class="text-light">WhatsApp Integration</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#seo" class="text-light">SEO
+                                Optimization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="index.html"
+                                class="text-light">Home</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#about"
+                                class="text-light">About Us</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="portfolio.html"
+                                class="text-light">Portfolio</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#pricing"
+                                class="text-light">Pricing</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#contact"
+                                class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#careers"
+                                class="text-light">Careers</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#privacy"
+                                class="text-light">Privacy Policy</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#terms"
+                                class="text-light">Terms of Service</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#blog"
+                                class="text-light">Blog</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="sitemap.html"
+                                class="text-light">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Get in Touch</h6>
+
+                    <ul class="list-unstyled mb-4">
+                        <!-- Location -->
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill text-teal me-2"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Pimpri-Chinchwad,+Pune,+Maharashtra"
+                                target="_blank" class="text-white text-decoration-none">
+                                Pimpri-Chinchwad, Pune, Maharashtra
+                            </a>
+                        </li>
+
+                        <!-- Phone -->
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill text-teal me-2"></i>
+                            <a href="tel:+919699564112" class="text-white text-decoration-none">
+                                +91 9699564112
+                            </a>
+                        </li>
+
+                        <!-- Email -->
+                        <li class="mb-3">
+                            <i class="bi bi-envelope-fill text-teal me-2"></i>
+                            <a href="mailto:info@sgwebtechnologies.in" class="text-white text-decoration-none">
+                                info@sgwebtechnologies.in
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Media -->
+                    <div class="social-footer">
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-4 hover-lift"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- Copyright & Credits -->
+                <hr class="my-4 border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0 text-light opacity-75">
+                            © 2025 SG Web Technologies. All rights reserved |
+                            <span class="text-teal fw-bold">MSMEReg: [MH-26-0162387]</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                        <small class="opacity-75">
+                            Crafted with ❤️ in Pune | Powered by
+                            <span class="text-teal">SG</span>
+                            <span class="text-teal">Group Of Business</span>
+                            </p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

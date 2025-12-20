@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <!-- Site Identity -->
+    <meta name="application-name" content="SG Web Technologies">
+    <meta name="theme-color" content="#00d4aa">
+    <title>Portfolio - SG Web Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar bg-teal text-white py-2 fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Contact Info -->
+                <div class="col-12 col-md-6">
+                    <small class="text-white fw-medium fs-6">
+
+                        <span class="me-3">
+                            <span class="me-2 text-teal">📧</span>
+                            <a href="mailto:info@sgwebtechnologies.in" class="text-white text-decoration-none">
+                                info@sgwebtechnologies.in
+                            </a>
+                        </span>
+
+                        <span>
+                            <span class="me-2 text-teal">📞</span>
+                            <a href="tel:+919699564112" class="text-white text-decoration-none">
+                                919699564112
+                            </a>
+                        </span>
+
+                    </small>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="col-12 col-md-6 text-end">
+                    <small>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white brand-logo" href="index.html">
+                SG<span>Web</span>Technologies
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Portfolio Hero -->
+    <section class="hero2 d-flex align-items-center text-white position-relative">
+        <!-- Background Image -->
+        <img src="./images/pphero-2.png" alt="SG Web Technologies Portfolio" class="hero-bg img-fluid">
+
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="fw-bold">Our Portfolio</h1>
+                    <p class="lead">
+                        Explore our latest projects showcasing modern design,
+                        high performance, and business-focused digital solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PORTFOLIO SECTION ================= -->
+    <section class="py-5" id="portfolio">
+        <div class="container">
+
+            <h1 class="text-center fw-bold mb-2">Our Portfolio</h1>
+            <p class="text-center text-muted mb-4">
+                Some of the projects we’ve successfully delivered
+            </p>
+
+            <!-- Filters -->
+            <div class="text-center mb-4">
+                <button class="btn btn-teal filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-teal filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="btn btn-teal filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="btn btn-teal filter-btn" data-filter="corporate">Corporate</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="row g-4" id="portfolioContainer">
+
+                <!-- Item 1 -->
+                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
+                    <div class="portfolio-card" onclick="openModal(
+                    'E-Commerce Website',
+                    'https://images.unsplash.com/photo-1557821552-17105176677c',
+                    'Full-featured e-commerce website with cart, checkout and admin dashboard.',
+                    'https://example.com'
+                )">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c">
+                        <div class="portfolio-overlay">
+                            <h5>E-Commerce Website</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-lg-4 col-md-6 portfolio-item landing">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Landing Page',
+                    'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+                    'High-converting landing page designed for marketing campaigns.'
+                )">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+                        <div class="portfolio-overlay">
+                            <h5>Landing Page</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Online Store',
+                    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+                    'Responsive online store with secure payment integration.'
+                )">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+                        <div class="portfolio-overlay">
+                            <h5>Online Store</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-lg-4 col-md-6 portfolio-item corporate">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Corporate Website',
+                    'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
+                    'Professional corporate website with services and contact pages.'
+                )">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+                        <div class="portfolio-overlay">
+                            <h5>Corporate Website</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <img id="modalImage" class="img-fluid rounded mb-3">
+                    <p id="modalDescription"></p>
+                    <a id="livePreviewBtn" target="_blank" class="btn btn-primary">
+                        🔗 Live Preview
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919699564112" class="whatsapp-float">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:+919699564112" class="call-float">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Logo & Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="index.html" class="footer-brand text-decoration-none d-inline-block text-center mb-3">
+                        <img src="./images/SG_WEb_LOGO.png" alt="SG Web Technologies" class="footer-logo mb-2">
+                        <div class="navbar-brand fw-bold text-white brand-logo"> SG<span>Web</span>Technologies</div>
+                    </a>
+
+                    <p class="mb-3">Global web solutions from Pune. MSME Registered & 5-Star Rated.</p>
+                    <div class="badges mb-3">
+                        <span class="badge bg-teal me-2 mb-1">MSME Registered</span>
+                        <span class="badge bg-success mb-1">5-Star Rated</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#uiux"
+                                class="text-light">UI/UX Design</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#frontend"
+                                class="text-light">Front-End Development</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#hosting"
+                                class="text-light">Domain & Hosting</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#whatsapp"
+                                class="text-light">WhatsApp Integration</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#seo" class="text-light">SEO
+                                Optimization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="index.html"
+                                class="text-light">Home</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#about"
+                                class="text-light">About Us</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="portfolio.html"
+                                class="text-light">Portfolio</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#pricing"
+                                class="text-light">Pricing</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#contact"
+                                class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#careers"
+                                class="text-light">Careers</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#privacy"
+                                class="text-light">Privacy Policy</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#terms"
+                                class="text-light">Terms of Service</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="#blog"
+                                class="text-light">Blog</a></li>
+                        <li><i class="bi bi-arrow-right-short text-teal me-2"></i><a href="sitemap.html"
+                                class="text-light">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Get in Touch</h6>
+
+                    <ul class="list-unstyled mb-4">
+                        <!-- Location -->
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill text-teal me-2"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Pimpri-Chinchwad,+Pune,+Maharashtra"
+                                target="_blank" class="text-white text-decoration-none">
+                                Pimpri-Chinchwad, Pune, Maharashtra
+                            </a>
+                        </li>
+
+                        <!-- Phone -->
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill text-teal me-2"></i>
+                            <a href="tel:+919699564112" class="text-white text-decoration-none">
+                                +91 9699564112
+                            </a>
+                        </li>
+
+                        <!-- Email -->
+                        <li class="mb-3">
+                            <i class="bi bi-envelope-fill text-teal me-2"></i>
+                            <a href="mailto:info@sgwebtechnologies.in" class="text-white text-decoration-none">
+                                info@sgwebtechnologies.in
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Media -->
+                    <div class="social-footer">
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3 fs-4 hover-lift"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-4 hover-lift"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- Copyright & Credits -->
+                <hr class="my-4 border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0 text-light opacity-75">
+                            © 2025 SG Web Technologies. All rights reserved |
+                            <span class="text-teal fw-bold">MSMEReg: [MH-26-0162387]</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                        <small class="opacity-75">
+                            Crafted with ❤️ in Pune | Powered by
+                            <span class="text-teal">SG</span>
+                            <span class="text-teal">Group Of Business</span>
+                            </p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
