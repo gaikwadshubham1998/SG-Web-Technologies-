@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
     setTimeout(() => {
         preloader.classList.add("fade-out");
         setTimeout(() => preloader.style.display = "none", 400);
-    }, 1000); // 1s minimum load
+    }, 300); // 1s minimum load
 });
 
 // 2. Sticky Navbar (Your code - unchanged)
