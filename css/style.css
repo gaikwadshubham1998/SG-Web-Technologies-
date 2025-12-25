@@ -722,6 +722,8 @@ body {
     position: relative;
 }
 
+
+
 .timeline-item {
     display: flex;
     align-items: flex-start;
@@ -785,6 +787,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -796,12 +799,14 @@ body {
 
     .timeline-item {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 1rem;
     }
 
+    /* ✅ Hide the vertical line on mobile */
     .process-timeline::before {
-        left: 25px;
+        content: none !important;
+        display: none !important;
     }
 }
 
@@ -1860,7 +1865,7 @@ body {
 
 .btn-teal.active,
 .btn-teal:hover {
-    background: #009e8a;
+    background: #0a2540;
     color: #fff;
 }
 
