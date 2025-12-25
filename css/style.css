@@ -1314,6 +1314,16 @@ body {
 
 
 /* Footer Styles - No underlines, professional */
+
+
+.linkedin-icon,
+.linkedin-icon:hover,
+.linkedin-icon:focus,
+.linkedin-icon:active {
+    text-decoration: none !important;
+}
+
+
 .footer-logo {
     width: 50px;
     height: 85px;
