@@ -89,31 +89,22 @@ body {
     }
 }
 
-/* MOBILE - Anti-overlap fix */
+
+/* MOBILE - Hide Top Bar */
 @media (max-width: 768px) {
+
+    /* Hide top bar */
     .top-bar {
-        padding: 8px 0 !important;
-        font-size: 0.8rem;
-        line-height: 1.3;
+        display: none !important;
     }
 
-    .top-bar .row>div {
-        margin-bottom: 4px !important;
-        text-align: center !important;
-    }
-
-    .top-bar .col-12 {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    /* Mobile navbar offset */
+    /* Reset navbar position since top bar is hidden */
     .navbar {
-        top: 52px !important;
+        top: 0 !important;
     }
 
     .navbar.scrolled {
-        top: 52px !important;
+        top: 0 !important;
     }
 }
 
@@ -128,7 +119,7 @@ body {
     }
 
     .navbar {
-        top: 46px !important;
+        top: 0px !important;
     }
 
     .navbar.scrolled {
