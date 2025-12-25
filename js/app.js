@@ -141,7 +141,7 @@ function sendSubscription(event) {
         "Subscriber Email: " + email
     );
 
-    // Change this to your email
+    // your email
     const yourEmail = "info@sgwebtechnologies.in";
 
     window.location.href = `mailto:${yourEmail}?subject=${subject}&body=${body}`;
@@ -157,6 +157,8 @@ function sendSubscription(event) {
 function closeOffer() {
     document.getElementById('offerBanner').style.display = 'none';
 }
+
+
 
 // Show banner after 5 seconds with fade-in, then flashing
 setTimeout(function () {
@@ -223,7 +225,7 @@ function getLeadText() {
         return null;
     }
 
-    return `New Lead - SG Web Technologies
+    return `New Lead / New Enquiry - SG Web Technologies
 
 Name: ${firstName} ${lastName}
 Phone: ${phone}
