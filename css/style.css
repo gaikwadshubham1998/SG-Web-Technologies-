@@ -1024,6 +1024,7 @@ body {
         /* 👈 slightly transparent */
         backdrop-filter: blur(2px);
         /* optional soft look */
+
     }
 
     .whatsapp-float:hover,
