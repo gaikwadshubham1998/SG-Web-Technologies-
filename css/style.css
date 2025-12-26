@@ -501,6 +501,41 @@ body {
 
 
 /* Review section */
+
+
+
+/* ===============================
+   Carousel Button Position (Desktop)
+   =============================== */
+.custom-carousel-btn.carousel-control-prev {
+    left: -60px;
+    /* shift left */
+}
+
+.custom-carousel-btn.carousel-control-next {
+    right: -60px;
+    /* shift right */
+}
+
+/* Optional: nicer button look */
+.custom-carousel-btn {
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+
+/* ===============================
+   Mobile View – Disable Buttons
+   =============================== */
+@media (max-width: 576px) {
+    .custom-carousel-btn {
+        display: none !important;
+        /* hides & disables */
+        pointer-events: none;
+    }
+}
+
 .testimonial-card {
     background: white;
     padding: 2rem;
