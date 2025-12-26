@@ -312,6 +312,25 @@ body {
 }
 
 
+
+/* Mobile view button in hero size fix */
+@media (max-width: 576px) {
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 10px 18px !important;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+
+    .d-flex.gap-3 .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
 /* Logo Card */
 .logo-card {
     position: relative;
