@@ -976,6 +976,9 @@ body {
 
 
 /* Call Floating Button */
+
+
+
 .call-float {
     position: fixed;
     right: 20px;
@@ -1007,6 +1010,28 @@ body {
 .call-float i {
     animation: ring 1.5s infinite;
 }
+
+
+
+/* ===============================
+   Mobile – Slight Transparency
+   =============================== */
+@media (max-width: 576px) {
+
+    .whatsapp-float,
+    .call-float {
+        opacity: 0.65;
+        /* 👈 slightly transparent */
+        backdrop-filter: blur(2px);
+        /* optional soft look */
+    }
+
+    .whatsapp-float:hover,
+    .call-float:hover {
+        opacity: 0.9;
+    }
+}
+
 
 /* Ring animation */
 @keyframes ring {
