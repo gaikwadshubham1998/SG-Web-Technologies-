@@ -1156,7 +1156,7 @@ body {
 }
 
 .btn-teal:hover {
-    background-color: #00b894;
+    background-color: #0a2540;
     border-color: #00b894;
     color: white;
 }
@@ -1167,7 +1167,7 @@ body {
 }
 
 .btn-outline-teal:hover {
-    background-color: var(--teal);
+    background-color: var(--navy);
     border-color: var(--teal);
     color: white;
 }
