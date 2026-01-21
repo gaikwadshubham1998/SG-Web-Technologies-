@@ -29,6 +29,13 @@
 </head>
 
 <body>
+
+    <!-- right click disabled -->
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
     <!-- Top Contact Bar -->
     <div class="top-bar bg-teal text-white py-2 fixed-top">
         <div class="container">
