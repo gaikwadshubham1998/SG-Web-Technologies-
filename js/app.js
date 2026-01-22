@@ -1,5 +1,5 @@
-// === YOUR ENHANCED MASTER SCRIPT ===
-// 1. Preloader (Fixed - was 10s, now 1s minimum)
+
+// 1. Preloader
 window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
@@ -8,13 +8,13 @@ window.addEventListener("load", function () {
     }, 300); // 1s minimum load
 });
 
-// 2. Sticky Navbar (Your code - unchanged)
+// 2. Sticky Navbar
 window.addEventListener("scroll", () => {
     document.querySelector(".navbar")
         .classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// 3. Hero Typing (Your code - unchanged + safeguards)
+// 3. Hero Typing 
 const heroTextEl = document.getElementById("heroText");
 const heroTexts = [
     "Best Web Solutions for Your Business",
@@ -51,7 +51,7 @@ function eraseText() {
     }
 }
 
-// 4. Smooth Scroll (Your code - unchanged)
+// 4. Smooth Scroll 
 document.querySelectorAll("a[href^='#']").forEach(anchor => {
     anchor.addEventListener("click", e => {
         e.preventDefault();
@@ -60,7 +60,7 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
     });
 });
 
-// 5. IMPROVED Counter Animation (Merges your version + fixes)
+// 5. IMPROVED Counter Animation 
 function animateCounters() {
     const counters = document.querySelectorAll('.counter:not(.animated)');
     counters.forEach(counter => {
@@ -148,11 +148,6 @@ function sendSubscription(event) {
 }
 
 
-
-
-
-
-
 // Close banner function
 function closeOffer() {
     document.getElementById('offerBanner').style.display = 'none';
@@ -171,12 +166,6 @@ setTimeout(function () {
         banner.classList.add('flash');
     }, 1000); // fade-in duration
 }, 2000);
-
-
-
-
-
-
 
 
 
@@ -203,10 +192,6 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
         });
     });
 });
-
-
-
-
 
 
 
