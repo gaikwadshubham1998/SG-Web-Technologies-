@@ -51,22 +51,7 @@ function eraseText() {
     }
 }
 
-// ios hero video 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector(".hero-video");
-
-    const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isIphone && video) {
-        video.setAttribute("webkit-playsinline", "");
-        video.muted = true;
-        video.play().catch(() => {
-            // iOS autoplay fallback
-            video.controls = false;
-        });
-    }
-});
 
 
 
