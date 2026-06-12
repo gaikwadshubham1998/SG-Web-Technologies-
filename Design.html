@@ -53,17 +53,23 @@
         }
 
         .btn-brand {
-            background-color: var(--teal);
+            background: linear-gradient(135deg, var(--teal) 0%, #00f2c4 100%);
             color: var(--navy);
-            font-weight: 600;
-            padding: 12px 28px;
+            font-weight: 700;
+            padding: 12px 32px;
             border-radius: 50px;
             border: none;
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-brand:hover {
-            background-color: #00b897;
+            background: linear-gradient(135deg, var(--navy) 0%, #12355a 100%);
             color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 170, 0.4);
         }
 
         /* Section Titles */

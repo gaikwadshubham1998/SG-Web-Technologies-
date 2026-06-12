@@ -84,7 +84,7 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="top: 40px;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold text-white brand-logo" href="index.html">
                 SG<span>Web</span>Technologies
@@ -162,62 +162,145 @@
             <!-- Portfolio Grid -->
             <div class="row g-4" id="portfolioContainer">
 
-                <!-- Item 1 -->
-                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
-                    <div class="portfolio-card" onclick="openModal(
-                    'E-Commerce Website',
-                    'https://images.unsplash.com/photo-1557821552-17105176677c',
-                    'Full-featured e-commerce website with cart, checkout and admin dashboard.',
-                    'https://example.com'
-                )">
-                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c">
-                        <div class="portfolio-overlay">
-                            <h5>E-Commerce Website</h5>
-                            <p>Click to Preview</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
+                <!-- Item 1: Power Fit Gym -->
                 <div class="col-lg-4 col-md-6 portfolio-item landing">
                     <div class="portfolio-card" onclick="openModal(
-                    'Landing Page',
-                    'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                    'High-converting landing page designed for marketing campaigns.'
+                    'Power Fit Gym',
+                    'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80',
+                    'Modern landing page for Power Fit Gym featuring interactive training schedules, workout plans, and social media connectivity.',
+                    'https://power-fit-gym-sage.vercel.app/'
                 )">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Power Fit Gym">
                         <div class="portfolio-overlay">
-                            <h5>Landing Page</h5>
+                            <h5>Power Fit Gym</h5>
                             <p>Click to Preview</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
-                    <div class="portfolio-card" onclick="openModal(
-                    'Online Store',
-                    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
-                    'Responsive online store with secure payment integration.'
-                )">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-                        <div class="portfolio-overlay">
-                            <h5>Online Store</h5>
-                            <p>Click to Preview</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
+                <!-- Item 2: SG Motors -->
                 <div class="col-lg-4 col-md-6 portfolio-item corporate">
                     <div class="portfolio-card" onclick="openModal(
-                    'Corporate Website',
-                    'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
-                    'Professional corporate website with services and contact pages.'
+                    'SG Motors',
+                    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=80',
+                    'Car showroom and dealership showcase website featuring multi-brand specifications, interactive query capture forms, and clean responsive grids.',
+                    'https://sg-motors.vercel.app/'
                 )">
-                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=80" alt="SG Motors">
                         <div class="portfolio-overlay">
-                            <h5>Corporate Website</h5>
+                            <h5>SG Motors</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Paryatan 365 -->
+                <div class="col-lg-4 col-md-6 portfolio-item landing">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Paryatan 365',
+                    'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80',
+                    'Interactive Travel & Tourism tour operator planning platform featuring popular destinations guides, package detail listings, and client booking inquiry forms.',
+                    'https://paryatan-365-master.vercel.app/'
+                )">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="Paryatan 365">
+                        <div class="portfolio-overlay">
+                            <h5>Paryatan 365</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Rahul Engineers Pvt Ltd -->
+                <div class="col-lg-4 col-md-6 portfolio-item corporate">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Rahul Engineers Pvt Ltd',
+                    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80',
+                    'High-quality industrial engineering corporate business portal highlighting fabrication services, machinery setup capabilities, and certifications.',
+                    'https://rahul-engineers-pvt-ltd.vercel.app/'
+                )">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Rahul Engineers Pvt Ltd">
+                        <div class="portfolio-overlay">
+                            <h5>Rahul Engineers</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Shubham T-T -->
+                <div class="col-lg-4 col-md-6 portfolio-item landing">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Shubham T-T',
+                    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80',
+                    'Clean digital marketing portfolio landing page designed for professional business presentations, consultations booking, and service audits.',
+                    'https://shubham-t-t.vercel.app/'
+                )">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Shubham T-T">
+                        <div class="portfolio-overlay">
+                            <h5>Shubham T-T</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Lumiere Cake Shop -->
+                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Lumiere Cake Shop',
+                    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80',
+                    'Vibrant bakery and confectionery e-commerce storefront with catalog browsing, details preview, and WhatsApp checkout ordering integration.',
+                    'https://lumiere-cake.vercel.app/'
+                )">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80" alt="Lumiere Cake Shop">
+                        <div class="portfolio-overlay">
+                            <h5>Lumiere Cake Shop</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: GreenGarden Nursery -->
+                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
+                    <div class="portfolio-card" onclick="openModal(
+                    'GreenGarden Nursery',
+                    'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&auto=format&fit=crop&q=80',
+                    'Premium plants and garden accessories online storefront template featuring grid categorization, filter features, and direct WhatsApp checkout.',
+                    '#'
+                )">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&auto=format&fit=crop&q=80" alt="GreenGarden Nursery">
+                        <div class="portfolio-overlay">
+                            <h5>GreenGarden Nursery</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8: Apex Law Chambers -->
+                <div class="col-lg-4 col-md-6 portfolio-item corporate">
+                    <div class="portfolio-card" onclick="openModal(
+                    'Apex Law Chambers',
+                    'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80',
+                    'Elegant corporate website layout for legal advisors and advocates featuring client credentials, attorneys directory, and inquiry evaluation forms.',
+                    '#'
+                )">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80" alt="Apex Law Chambers">
+                        <div class="portfolio-overlay">
+                            <h5>Apex Law Chambers</h5>
+                            <p>Click to Preview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9: FlavorByte Restaurant -->
+                <div class="col-lg-4 col-md-6 portfolio-item landing">
+                    <div class="portfolio-card" onclick="openModal(
+                    'FlavorByte Restaurant',
+                    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80',
+                    'Sleek restaurant presentation webpage showcasing high-quality menus, chef biographies, reservation schedules, and contact mapping.',
+                    '#'
+                )">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80" alt="FlavorByte Restaurant">
+                        <div class="portfolio-overlay">
+                            <h5>FlavorByte Restaurant</h5>
                             <p>Click to Preview</p>
                         </div>
                     </div>
@@ -340,7 +423,7 @@
                         <!-- Location -->
                         <li class="mb-2">
                             <i class="bi bi-geo-alt-fill text-teal me-2"></i>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Pimpri-Chinchwad,+Pune,+Maharashtra"
+                            <a href="https://share.google/gKxWsYV2xndADR5GY"
                                 target="_blank" class="text-white text-decoration-none">
                                 Pimpri-Chinchwad, Pune, Maharashtra
                             </a>
