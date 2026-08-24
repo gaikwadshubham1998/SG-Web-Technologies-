@@ -1,18 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Performance & Smooth Rendering Foundations */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 html,
 body {
     width: 100%;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
-
-
 
 :root {
     --navy: #0a2540;
+    --navy-dark: #061729;
     --navy-light: #12355a;
     --teal: #00d4aa;
     --teal-glow: rgba(0, 212, 170, 0.4);
+    --teal-subtle: rgba(0, 212, 170, 0.1);
     --font-heading: 'Sora', 'Outfit', 'Segoe UI', sans-serif;
     --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
 }
@@ -2671,3 +2681,80 @@ body {
 .hover-teal:hover {
     color: var(--teal) !important;
 }
+
+/* =========================================================
+   PREMIUM LUXURY UI ENHANCEMENTS & SPEED UTILITIES
+   ========================================================= */
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #071728;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #123b5d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--teal);
+}
+
+/* Premium Card Glass & Border Lighting */
+.card, .service-card, .team-card, .portfolio-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card:hover, .service-card:hover, .team-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 36px rgba(0, 212, 170, 0.12), 0 4px 12px rgba(10, 37, 64, 0.08) !important;
+}
+
+/* WhatsApp Floating Glow */
+.whatsapp-float {
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6) !important;
+}
+
+/* Social icon hover lift & glow */
+.social-footer a, .top-bar .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, color 0.25s ease, filter 0.25s ease !important;
+}
+
+.social-footer a:hover, .top-bar .social-icons a:hover {
+    transform: translateY(-3px) scale(1.15) !important;
+    color: var(--teal) !important;
+    filter: drop-shadow(0 0 8px var(--teal-glow)) !important;
+}
+
+/* Modern Badge Pill Glow */
+.badge-pill-glow {
+    background: rgba(0, 212, 170, 0.12);
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    color: var(--teal);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Content rendering speed optimization for deep pages */
+.py-5, section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+}
