@@ -2753,8 +2753,8 @@ body {
     display: inline-block;
 }
 
-/* Content rendering speed optimization for deep pages */
-.py-5, section {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 500px;
+/* Smooth Hardware-Accelerated Rendering for Instant Display */
+img, video {
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
