@@ -304,6 +304,7 @@ body {
     position: relative;
     min-height: 95vh;
     overflow: hidden;
+    background: #061729;
 }
 
 /* Video full size */
@@ -3037,4 +3038,48 @@ body {
 img, video {
     backface-visibility: hidden;
     transform: translateZ(0);
-}
+}
+
+/* ==========================================================================
+   ⚡ MOBILE SPEED & CORE WEB VITALS OPTIMIZATIONS
+   ========================================================================== */
+
+/* Fast touch responsiveness without tap delay */
+a, button, input, select, textarea, .btn, .nav-link {
+    touch-action: manipulation;
+}
+
+/* Off-screen Content Visibility: speeds up initial mobile layout & rendering */
+@media (min-width: 0px) {
+    #industries,
+    #pricing,
+    .clients-section,
+    #faq,
+    .stats-section,
+    .team-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 500px;
+    }
+}
+
+/* Lightweight mobile GPU & scrolling performance */
+@media (max-width: 768px) {
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Reduce expensive backdrop blur calculations on mobile CPUs */
+    .pro-pkg-card,
+    .service-flip-card,
+    .custom-plan-card {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
+    
+    /* Prevent text reflow on mobile orientation changes */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+}
+

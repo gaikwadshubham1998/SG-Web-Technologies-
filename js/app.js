@@ -8,11 +8,13 @@ window.addEventListener("load", function () {
     }, 300); // 1s minimum load
 });
 
-// 2. Sticky Navbar
+// 2. Sticky Navbar with passive scroll listener for mobile smoothness
 window.addEventListener("scroll", () => {
-    document.querySelector(".navbar")
-        .classList.toggle("scrolled", window.scrollY > 50);
-});
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+    }
+}, { passive: true });
 
 // 3. Hero Typing 
 const heroTextEl = document.getElementById("heroText");
@@ -25,7 +27,7 @@ const heroTexts = [
 ];
 
 let textIndex = 0, charIndex = 0;
-let typingDelay = 100, erasingDelay = 50, delayBetweenTexts = 1500;
+let typingDelay = 90, erasingDelay = 40, delayBetweenTexts = 1600;
 
 function typeText() {
     if (!heroTextEl) return;
@@ -51,41 +53,41 @@ function eraseText() {
     }
 }
 
-
-
-
-
-// 4. Smooth Scroll 
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
+// 4. Smooth Scroll with safe target verification
+document.querySelectorAll("a[href^='#']:not([href='#'])").forEach(anchor => {
     anchor.addEventListener("click", e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
+        const href = anchor.getAttribute("href");
+        if (href && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        }
     });
 });
 
-// 5. IMPROVED Counter Animation 
+// 5. High-Performance Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('.counter:not(.animated)');
     counters.forEach(counter => {
         counter.classList.add('animated');
-        const target = +counter.getAttribute('data-target');
+        const target = +counter.getAttribute('data-target') || 0;
         let count = 0;
-        const inc = target / 200;
+        const inc = Math.max(1, Math.ceil(target / 40));
         const timer = setInterval(() => {
             count += inc;
             if (count < target) {
-                counter.innerText = Math.ceil(count).toLocaleString() + '+';  // ✅ + AFTER
+                counter.innerText = count.toLocaleString() + '+';
             } else {
-                counter.innerText = target.toLocaleString() + '+';             // ✅ + AFTER
+                counter.innerText = target.toLocaleString() + '+';
                 clearInterval(timer);
             }
-        }, 20);
+        }, 25);
     });
 }
 
-
-// // 6. Intersection Observer (Triggers counters ONCE)
+// 6. Intersection Observer (Triggers counters ONCE)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -93,7 +95,7 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.2 });
 
 // 7. Initialize Everything Safely
 document.addEventListener('DOMContentLoaded', () => {
