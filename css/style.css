@@ -202,8 +202,12 @@ body {
 }
 
 
+.top-bar a {
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
 .top-bar a:hover {
-    color: var(--navy) !important;
+    color: #000000 !important;
 }
 
 .navbar-brand {
@@ -669,209 +673,413 @@ body {
 }
 
 
-/* price and pack/* price and package  */
-.package-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+/* ===================================================
+   CHOOSE YOUR PACKAGE - HIGH-END REDESIGNED SECTION
+   =================================================== */
+
+.pricing-section-wrap {
+    background: radial-gradient(circle at 10% 15%, rgba(0, 212, 170, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(10, 37, 64, 0.04) 0%, transparent 45%),
+                #fcfdfe;
+    position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Category Switcher Pill */
+.pricing-tabs-container {
+    margin-bottom: 3.5rem;
+}
+
+.pricing-switcher-pills {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 60px;
+    display: inline-flex;
+    border: 1.5px solid rgba(0, 212, 170, 0.25);
+    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.06);
+}
+
+.pricing-switcher-pills .nav-link {
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-switcher-pills .nav-link.active {
+    background: var(--navy) !important;
+    color: var(--teal) !important;
+    box-shadow: 0 8px 24px rgba(10, 37, 64, 0.25);
+}
+
+.pricing-switcher-pills .nav-link:hover:not(.active) {
+    color: var(--teal) !important;
+}
+
+/* Professional Package Cards */
+.pro-pkg-card {
+    background: #ffffff;
+    border-radius: 28px;
+    border: 1.5px solid rgba(10, 37, 64, 0.08);
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.04);
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    overflow: hidden;
 }
 
-.package-card:hover {
-    transform: translateY(-12px);
-    border-color: rgba(0, 212, 170, 0.4);
-    box-shadow: 0 30px 60px rgba(0, 212, 170, 0.15);
-    z-index: 2;
+.pro-pkg-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 212, 170, 0.5);
+    box-shadow: 0 28px 65px rgba(0, 212, 170, 0.16);
 }
 
-/* Most Popular card standout */
-.package-card.popular-card {
+/* Popular Standout Card */
+.pro-pkg-card.popular-featured {
     border: 2px solid var(--teal);
-    box-shadow: 0 20px 45px rgba(0, 212, 170, 0.12);
-}
-
-.package-card.popular-card:hover {
-    box-shadow: 0 30px 60px rgba(0, 212, 170, 0.25);
-}
-
-.package-header {
-    background: linear-gradient(135deg, rgba(248, 249, 255, 0.8) 0%, rgba(232, 244, 253, 0.8) 100%);
-    padding: 2.5rem 2rem 2rem;
-    text-align: center;
+    box-shadow: 0 22px 55px rgba(0, 212, 170, 0.18);
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.package-header.popular {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-    color: white;
-    border-bottom: none;
+.pro-pkg-card.popular-featured:hover {
+    box-shadow: 0 32px 75px rgba(0, 212, 170, 0.28);
 }
 
-.package-header h3 {
-    font-size: 1.5rem;
+/* Floating Popular Badge */
+.popular-floating-tag {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+    color: var(--navy);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 212, 170, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 3;
+}
+
+/* Card Header Area */
+.pro-pkg-header {
+    padding: 2.25rem 2rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(180deg, rgba(248, 251, 255, 0.8) 0%, #ffffff 100%);
+    position: relative;
+}
+
+.pro-pkg-card.popular-featured .pro-pkg-header {
+    background: linear-gradient(180deg, rgba(235, 253, 249, 0.9) 0%, #ffffff 100%);
+}
+
+.pkg-tier-chip {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--teal);
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.pro-pkg-title {
+    font-size: 1.65rem;
     font-weight: 800;
     color: var(--navy);
+    margin-bottom: 4px;
     letter-spacing: -0.5px;
 }
 
-.package-header.popular h3 {
-    color: white;
+.pro-pkg-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
 }
 
-.package-badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 6px 16px;
-    border-radius: 50px;
-    text-transform: uppercase;
-}
-
-.bg-teal-soft {
-    background-color: rgba(0, 212, 170, 0.1);
-    color: var(--teal);
-}
-
-.bg-teal-glow {
-    background-color: rgba(0, 212, 170, 0.2);
-    color: var(--teal);
-}
-
-/* Price typography styling */
-.price-wrap {
+/* Pricing Display Typography */
+.pro-price-block {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.original-price-wrap {
-    min-height: 24px;
+.original-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
 }
 
-.original-price {
-    text-decoration: line-through;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.currency {
-    font-size: 1.5rem;
+.pro-old-price {
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
-    margin-right: 2px;
+    color: #94a3b8;
+    text-decoration: line-through;
 }
 
-.amount {
-    font-size: 3.25rem;
+.pro-discount-pill {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    font-size: 0.75rem;
     font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.pro-active-price {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+.pro-currency {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
     line-height: 1;
-    letter-spacing: -1px;
+}
+
+.pro-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.pro-pkg-card.popular-featured .pro-amount {
+    color: #075e54;
+}
+
+.pro-cadence {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-left: 4px;
+}
+
+/* Quick Deliverable Pill Bar */
+.pro-key-metric {
+    background: rgba(0, 212, 170, 0.08);
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    border-radius: 12px;
+    padding: 8px 14px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--navy);
 }
 
-.package-header.popular .amount {
-    color: var(--teal);
-}
-
-.duration {
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.package-body {
+/* Feature List Section */
+.pro-pkg-features {
+    padding: 1.75rem 2rem;
     flex-grow: 1;
-    padding: 2rem 0;
 }
 
-.feature-list {
+.pro-feature-headline {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.pro-feature-ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.feature-list li {
     display: flex;
-    align-items: center;
-    padding: 0.75rem 2rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #4a5568;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-    text-align: left;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.feature-list li:last-child {
-    border-bottom: none;
+.pro-feature-li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.45;
 }
 
-.check-icon {
+.pro-check-bubble {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 212, 170, 0.15);
+    color: #00a884;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
-    height: 22px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pro-pkg-card.popular-featured .pro-check-bubble {
+    background: var(--teal);
+    color: var(--navy);
+}
+
+/* Card Action Footer */
+.pro-pkg-footer {
+    padding: 1.5rem 2rem 2rem;
+    background: #fafbfc;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.btn-pkg-wa {
+    background: linear-gradient(135deg, #00d4aa 0%, #00f2c4 100%);
+    color: var(--navy) !important;
+    border: 1.5px solid transparent;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    padding: 0.75rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 212, 170, 0.3);
+}
+
+.btn-pkg-wa:hover {
+    background: var(--navy);
+    border-color: var(--teal);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 212, 170, 0.4);
+}
+
+.btn-pkg-call {
+    background: rgba(0, 212, 170, 0.08);
+    color: var(--navy) !important;
+    border: 1.5px solid var(--teal);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    padding: 0.75rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.btn-pkg-call:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--teal) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.2);
+}
+
+/* Custom Package Glassmorphism Banner */
+.custom-plan-card {
+    background: linear-gradient(135deg, #071c33 0%, #0a2540 60%, #05332c 100%);
+    border: 1.5px solid rgba(0, 212, 170, 0.35);
+    border-radius: 28px;
+    color: #ffffff;
+    padding: 2.75rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(10, 37, 64, 0.2);
+}
+
+.custom-plan-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(0, 212, 170, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.custom-plan-card .badge-custom-tag {
+    background: rgba(0, 212, 170, 0.15);
+    border: 1px solid rgba(0, 212, 170, 0.4);
+    color: var(--teal);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.custom-plan-card h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.custom-pill-feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Trust Bar Below Pricing */
+.pricing-trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.trust-pillar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.trust-pillar-icon {
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: rgba(0, 212, 170, 0.12);
     color: var(--teal);
-    font-size: 0.85rem;
-    flex-shrink: 0;
-    margin-right: 0.85rem;
-}
-
-.package-card.premium-dark .check-icon {
-    background: rgba(0, 212, 170, 0.2);
-    color: var(--teal);
-}
-
-/* Premium Dark Package Card */
-.package-card.premium-dark {
-    background: linear-gradient(135deg, #071626 0%, #030a12 100%);
-    color: white;
-    border: 1px solid rgba(0, 212, 170, 0.25);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-}
-
-.package-card.premium-dark:hover {
-    border-color: var(--teal);
-    box-shadow: 0 30px 60px rgba(0, 212, 170, 0.25);
-}
-
-.package-card.premium-dark .package-header {
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.package-card.premium-dark .package-header h3 {
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 212, 170, 0.3);
-}
-
-.package-card.premium-dark .original-price {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.package-card.premium-dark .amount {
-    color: var(--teal);
-    text-shadow: 0 0 15px rgba(0, 212, 170, 0.3);
-}
-
-.package-card.premium-dark .feature-list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.package-footer {
-    padding: 1.5rem 2rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
 }
 
 /* Premium buttons */
@@ -2682,6 +2890,71 @@ body {
     color: var(--teal) !important;
 }
 
+/* Smooth reveal animation for Show More items */
+.reveal-fade-in {
+    animation: revealFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Pricing Section Mobile Enhancements */
+@media (max-width: 768px) {
+    .pricing-switcher-pills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 6px;
+    }
+
+    .pricing-switcher-pills .nav-link {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.92rem;
+    }
+
+    .pro-pkg-header {
+        padding: 1.75rem 1.5rem 1.25rem;
+    }
+
+    .pro-pkg-features {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .pro-pkg-footer {
+        padding: 1.25rem 1.5rem 1.75rem;
+    }
+
+    .pro-amount {
+        font-size: 2.5rem;
+    }
+
+    .custom-plan-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .custom-plan-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-trust-bar {
+        gap: 1.25rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 /* =========================================================
    PREMIUM LUXURY UI ENHANCEMENTS & SPEED UTILITIES
    ========================================================= */
@@ -2734,10 +3007,17 @@ body {
     transition: transform 0.25s ease, color 0.25s ease, filter 0.25s ease !important;
 }
 
-.social-footer a:hover, .top-bar .social-icons a:hover {
+.social-footer a:hover {
     transform: translateY(-3px) scale(1.15) !important;
     color: var(--teal) !important;
     filter: drop-shadow(0 0 8px var(--teal-glow)) !important;
+}
+
+.top-bar .social-icons a:hover,
+.top-bar .social-icons a:hover i {
+    transform: translateY(-3px) scale(1.15) !important;
+    color: #000000 !important;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3)) !important;
 }
 
 /* Modern Badge Pill Glow */

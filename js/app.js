@@ -246,3 +246,52 @@ function sendWhatsApp() {
     window.open(waURL, "_blank");
 }
 
+// 8. Show More / Show Less for Home Page Services & Industries
+document.addEventListener("DOMContentLoaded", () => {
+    // Services Toggle
+    const toggleServicesBtn = document.getElementById("toggleServicesBtn");
+    if (toggleServicesBtn) {
+        let isExpanded = false;
+        toggleServicesBtn.addEventListener("click", () => {
+            isExpanded = !isExpanded;
+            const moreItems = document.querySelectorAll(".service-more-item");
+            moreItems.forEach(item => {
+                if (isExpanded) {
+                    item.classList.remove("d-none");
+                    item.classList.add("reveal-fade-in");
+                } else {
+                    item.classList.add("d-none");
+                    item.classList.remove("reveal-fade-in");
+                }
+            });
+
+            toggleServicesBtn.innerHTML = isExpanded
+                ? '<i class="bi bi-grid-fill text-teal me-2"></i>Show Less Services <i class="bi bi-chevron-up ms-1"></i>'
+                : '<i class="bi bi-grid-fill text-teal me-2"></i>Show More Services <i class="bi bi-chevron-down ms-1"></i>';
+        });
+    }
+
+    // Industries Toggle
+    const toggleIndustriesBtn = document.getElementById("toggleIndustriesBtn");
+    if (toggleIndustriesBtn) {
+        let isIndustriesExpanded = false;
+        toggleIndustriesBtn.addEventListener("click", () => {
+            isIndustriesExpanded = !isIndustriesExpanded;
+            const moreIndustries = document.querySelectorAll(".industry-more-item");
+            moreIndustries.forEach(item => {
+                if (isIndustriesExpanded) {
+                    item.classList.remove("d-none");
+                    item.classList.add("reveal-fade-in");
+                } else {
+                    item.classList.add("d-none");
+                    item.classList.remove("reveal-fade-in");
+                }
+            });
+
+            toggleIndustriesBtn.innerHTML = isIndustriesExpanded
+                ? '<i class="bi bi-briefcase-fill text-teal me-2"></i>Show Less Industries <i class="bi bi-chevron-up ms-1"></i>'
+                : '<i class="bi bi-briefcase-fill text-teal me-2"></i>Show More Industries <i class="bi bi-chevron-down ms-1"></i>';
+        });
+    }
+});
+
