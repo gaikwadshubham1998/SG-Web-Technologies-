@@ -37,7 +37,7 @@
         gtag('config', 'G-1QN99MGZNT');
     </script>
 
-    <!-- Structured Data: ContactPage Schema -->
+    <!-- Structured Data: ContactPage & LocalBusiness Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,10 +45,15 @@
       "name": "Contact SG Web Technologies",
       "url": "https://www.sgwebtechnologies.in/contact.html",
       "mainEntity": {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "name": "SG Web Technologies",
+        "alternateName": "SG Web Tech Pune",
+        "image": "https://www.sgwebtechnologies.in/images/SG_WEb_LOGO.png",
+        "@id": "https://www.sgwebtechnologies.in/#organization",
+        "url": "https://www.sgwebtechnologies.in",
         "telephone": "+919699564112",
         "email": "info@sgwebtechnologies.in",
+        "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Pimpri-Chinchwad",
@@ -56,7 +61,83 @@
           "addressRegion": "Maharashtra",
           "postalCode": "411018",
           "addressCountry": "IN"
-        }
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.6279,
+          "longitude": 73.8009
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "58",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61562942163236",
+          "https://www.instagram.com/sgwebtechnologies/",
+          "https://www.linkedin.com/company/144689946/"
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Pune"
+          },
+          {
+            "@type": "City",
+            "name": "Pimpri-Chinchwad"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Hinjewadi"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Wakad"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Baner"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Kharadi"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Viman Nagar"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Hadapsar"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Magarpatta City"
+          },
+          {
+            "@type": "City",
+            "name": "Mumbai"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ]
       }
     }
     </script>
@@ -133,7 +214,7 @@
                         <!-- <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a> -->
                         <a href="https://www.instagram.com/sgwebtechnologies/" class="text-white me-3" target="_blank"
                             rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/sg-web-technologies-1b73073a1" class="text-white"
+                        <a href="https://www.linkedin.com/company/144689946/" class="text-white"
                             target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-linkedin"></i>
                         </a>
@@ -416,7 +497,7 @@
 
             <!-- Horizontal Map -->
             <div class="mt-5" data-aos="fade-up">
-                <div class="rounded-4 overflow-hidden shadow-sm position-relative">
+                <div class="rounded-4 overflow-hidden shadow-sm position-relative mb-4">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.9353601344704!2d73.79503555508735!3d18.618928079892047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90032478a61%3A0x93518bac14087245!2sSG%20Web%20Technologies!5e0!3m2!1sen!2sin!4v1768978666174!5m2!1sen!2sin"
                         width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"
@@ -426,6 +507,21 @@
                         <a href="https://share.google/gKxWsYV2xndADR5GY" target="_blank" rel="noopener noreferrer" class="btn btn-teal shadow">
                             <i class="bi bi-box-arrow-up-right me-2"></i> Open in Google Maps
                         </a>
+                    </div>
+                </div>
+
+                <!-- Local Hubs Badge Strip -->
+                <div class="bg-white rounded-4 shadow-sm p-4 text-center border-top border-3 border-teal">
+                    <h6 class="fw-bold mb-2 text-navy">In-Person & On-Site Consultations Available Across:</h6>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Pimpri-Chinchwad (PCMC)</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Hinjewadi IT Park</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Wakad & Pimple Saudagar</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Baner & Balewadi</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Kharadi & Viman Nagar</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Hadapsar & Magarpatta</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Kothrud & Shivajinagar</span>
+                        <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-geo-alt text-teal me-1"></i> Bhosari & Nigdi</span>
                     </div>
                 </div>
             </div>
@@ -553,7 +649,7 @@
                                 class="bi bi-facebook"></i></a>
                         <a href="https://www.instagram.com/sgwebtechnologies/" class="text-white me-3 fs-4 hover-lift"
                             target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/sg-web-technologies-1b73073a1" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.linkedin.com/company/144689946/" target="_blank" rel="noopener noreferrer"
                             class="linkedin-icon text-white me-3 fs-4 hover-lift" aria-label="LinkedIn">
                             <i class="bi bi-linkedin"></i>
                         </a>
